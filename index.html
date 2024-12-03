@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Creative Image Real Estate Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Real Estate Services, Virtual Staging, Virtual Tours, Real Estate Photography, Panorama Stitching, Sky Replacement, Product Image Enhancement, Property Marketing, Real Estate Visuals">
+    <meta name="description" content="CreativeImages specializes in Real Estate Services, offering Virtual Staging, Virtual Tours, Real Estate Photography, Panorama Stitching, Sky Replacement, and Product Image Enhancement to transform your property marketing, Virtual Staging for Real Estate or Professional Real Estate Photography Tips">
+    <!-- Favicon -->
+    <link href="img/logo-transparent.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@500;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "rtXHvk4SMZqesgp1V",
+      });
+    })();
+    </script>
+    
+
+<script>
+function sendMail(event) {
+event.preventDefault(); // Prevent form submission
+
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let subject = document.getElementById("subject").value.trim();
+let message = document.getElementById("message").value.trim();
+
+if (!name) {
+    alert("Please enter your name.");
+    return;
+}
+if (!email) {
+    alert("Please enter your email.");
+    return;
+}
+if (!subject) {
+    alert("Please enter the subject.");
+    return;
+}
+if (!message) {
+    alert("Please enter your message.");
+    return;
+}
+
+// Send email if all fields are valid
+let parms = { name, email, subject, message };
+emailjs.send("service_q7btjyu", "template_ozfiwtq", parms)
+    .then(() => {
+        alert("Email has been sent successfully!");
+        document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("subject").value = "";
+      document.getElementById("message").value = "";
+    })
+    .catch((error) => {
+        alert("Failed to send email: " + error);
+    });
+}
+</script>
+
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+ 
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
+                <a href="index.html" class="navbar-brand d-lg-none">
+                    <h1 class="fw-bold m-0 ">Creative Image</h1> <!-- Adjust 'fs-4' as needed -->
+                  </a>
+                <button
+                  type="button"
+                  class="navbar-toggler me-0"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarCollapse"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <div class="navbar-nav">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Company Services</a>
+                    <div class="nav-item dropdown">
+                      <a
+                        href="service.html"
+                        class="nav-link dropdown-toggle active"
+                        data-bs-toggle="dropdown"
+                        >Best Services</a
+                      >
+                      <div
+                        class="dropdown-menu bg-light rounded-0 rounded-bottom m-0"
+                      >
+                      <a href="RealEstate.html" class="dropdown-item"
+                          >Real Estate Image Editing</a
+                        >
+                        <a href="virtualstaging.html" class="dropdown-item"
+                          >Virtual Staging</a
+                        >
+                        <a href="virtualtours.html" class="dropdown-item"
+                          >Virtual Tours</a
+                        >
+                        <a href="sky.html" class="dropdown-item active"
+                          >Sky Replacement</a
+                        >
+                        <a href="daytodusk.html" class="dropdown-item"
+                          >Day To Dusk</a>
+                        <a href="floorplan.html" class="dropdown-item"
+                          >Floor Plan</a
+                        >
+                        <a href="portrait.html" class="dropdown-item">
+                          Portrait Enhancement</a
+                        >
+                        <a href="drone.html" class="dropdown-item">
+                          Drone Photo Enhancement</a
+                        >
+                        <a href="productImage.html" class="dropdown-item">
+                            Product Image Enhancement </a
+                          >
+      
+                        <a href="hdr.html" class="dropdown-item"> HDR Image </a>
+      
+                        <a href="grass.html" class="dropdown-item">
+                          Grass replacement</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ms-auto d-none d-lg-block">
+                    <a href="contact.html" class="btn btn-primary rounded-pill py-2 px-3"
+                      >Contact Us</a
+                    >
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+   <!-- Topbar Start -->
+<div class="container-fluid bg-primary text-white d-none d-lg-flex">
+    <div class="container py-1">
+        <div class="d-flex align-items-center justify-content-between">
+            <!-- Left Section (Logo) -->
+            <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="img/high-resolution.png" alt="Logo" class="logo-img img-fluid">
+                <h2 class="logo-text mb-0 ms-2">Creative Image</h2>
+            </a>
+
+            <!-- Center Section (Contact Details) -->
+            <div class="d-flex align-items-center">
+                <small class="me-4" style="font-size: 0.8rem;">
+                    <i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA
+                </small>
+                <small class="me-4" style="font-size: 0.8rem;">
+                    <i class="fa fa-envelope me-2"></i>info@example.com
+                </small>
+                <small style="font-size: 0.8rem;">
+                    <i class="fa fa-phone-alt me-2"></i>+012 345 67890
+                </small>
+            </div>
+
+            <!-- Right Section (Social Icons) -->
+            <div class="d-flex align-items-center">
+                <a class="btn btn-sm-square btn-light text-primary rounded-circle me-2" href="">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-sm-square btn-light text-primary rounded-circle me-2" href="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="btn btn-sm-square btn-light text-primary rounded-circle" href="">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+    <div class="slider"> <div class="slides"> <img src="img/hdr8.jpg" alt="Image 1"> <img src="img/hdr2.jpg" alt="Image 2"> <img src="img/hdr3.jpg" alt="Image 3"> <img src="img/hdr4.jpg" alt="Image 4"> <img src="img/hdr5.jpg" alt="Image 5">  <img src="img/hdr6.jpg" alt="Image 6">  <img src="img/hdr3.jpg" alt="Image 7">  <img src="img/hdr1.jpg" alt="Image 8"> <img src="img/hdr1.jpg" alt="Image 8"><img src="img/hdr9.jpg" alt="Image 9"><img src="img/hdr10.jpg" alt="Image 10"><img src="img/hdr11.jpg" alt="Image 11"></div> </div>
+
+    <!-- Features Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-0 feature-row">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="feature-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-1.png" alt="Icon">
+                        </div>
+                        <h5 class="mb-3">1000+ Projects</h5>
+                        <p class="mb-0">We're excited to continue delivering top-notch services and achieving new heights together!</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="feature-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-2.png" alt="Icon">
+                        </div>
+                        <h5 class="mb-3">15+ Years of experience</h5>
+                        <p class="mb-0">Our extensive experience ensures top-quality service and unparalleled expertise in the field.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="feature-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
+                        </div>
+                        <h5 class="mb-3">Fair Prices</h5>
+                        <p class="mb-0">Quality and affordability go hand in hand with our services and making properties more attractive to potential buyers.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="feature-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-4.png" alt="Icon">
+                        </div>
+                        <h5 class="mb-3">1550+ Projects Completed</h5>
+                        <p class="mb-0"><strong>24/7 Support :</strong> Our dedicated team is available around the clock to assist you with any needs or queries, ensuring you always have the support you need.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+
+
+    <!-- About Start -->
+    <div class="container-xl about my-8 text-center p-lg-5 p-8">
+        <div class="container">
+            <div class="row g-0">
+                
+                <div class="col-lg-5 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-white rounded-top p-5 mt-lg-5">
+                        <p class="fs-5 fw-medium text-primary">Why We are the Best</p>
+                        <h1 class="display-6 mb-4">The Best Marketing Agency to Improve Your Business</h1>
+                        <p class="mb-3">Choose Us for Quality, Creativity, and Results That Speak for Themselves!.</p>
+                        <div class="row g-5 pt-2 mb-5">
+                            <div class="col-sm-6">
+                                <img class="img-fluid mb-4" src="img/icon/icon-5.png" alt="">
+                                <h5 class="mb-3">Cutting-Edge Technology</h5>
+                                <span>We use the latest software and tools to deliver exceptional quality.Making your products shine with precision and style.</span>
+                            </div>
+                            <div class="col-sm-6">
+                                <img class="img-fluid mb-4" src="img/icon/icon-2.png" alt="">
+                                <h5 class="mb-3">Dedicated Experts</h5>
+                                <span>Dynamic, vibrant, and detailed photos that stand out.</span>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="service.html">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-medium text-primary">Our Services</p>
+                <h1 class="display-5 mb-5">We Offer Quality, Creativity and Results </h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
+                            </div>
+                            <h5 class="mb-3">Real Estate Photography</h4>
+                            <p class="mb-0">Transforming properties into irresistible visuals that sell fast.</p>
+                        </div>
+                        <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="text-primary fw-medium" href="RealEstate.html
+                            ">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                            </div>
+                            <h5 class="mb-3">Virtual Staging</h4>
+                            <p class="mb-0">Bringing empty spaces to life with stunning virtual furniture.</p>
+                        </div>
+                        <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="text-primary fw-medium" href="virtualstaging.html">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-7.png" alt="Icon">
+                            </div>
+                            <h5 class="mb-3">Virtual Tour Services</h4>
+                            <p class="mb-0">Immersive tours that let buyers explore properties anytime, anywhere.</p>
+                        </div>
+                        <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="text-primary fw-medium" href="virtualtours.html">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                            </div>
+                            <h5 class="mb-3">Panorama Stitching</h4>
+                            <p class="mb-0">Flawless wide-angle views that showcase every detail.</p>
+                        </div>
+                        <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="text-primary fw-medium" href="panoroma.html">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-9.png" alt="Icon">
+                            </div>
+                            <h5 class="mb-3">Sky Replacement</h4>
+                            <p class="mb-0">Turning dull skies into breathtaking backdrops.</p>
+                        </div>
+                        <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="text-primary fw-medium" href="sky.html">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item position-relative h-100">
+                        <div class="service-text rounded p-5">
+                            <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 64px; height: 64px;">
+                                <img class="img-fluid" src="img/icon/icon-10.png" alt="Icon">
+                            </div>
+                            <h5 class="mb-3">Product Image Enhancement</h4>
+                            <p class="mb-0">Making your products shine with precision and style.
+
+                            </p>
+                        </div>
+                        <div class="service-btn rounded-0 rounded-bottom">
+                            <a class="text-primary fw-medium" href="productImage.html">Read More<i class="bi bi-chevron-double-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Project Start -->
+    <div class="container-xxl pt-5">
+        <div class="container">
+            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-medium text-primary">Our Projects</p>
+                <h1 class="display-5 mb-5">We've Done Lot's of Awesome Projects</h1>
+            </div>
+            <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="project-item mb-5">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/sky.jpg" alt="">
+                        <div class="project-overlay">
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/sky.jpg" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                            
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <a class="d-block h5" href="">Sky Replacement</a>
+                        <span>Turning dull skies into breathtaking backdrops.</span>
+                    </div>
+                </div>
+                <div class="project-item mb-5">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/product.jpg" alt="">
+                        <div class="project-overlay">
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/product.jpg" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                            
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <a class="d-block h5" href="">Product Image Enhancement</a>
+                        <span>Making your products shine with precision and style.</span>
+                    </div>
+                </div>
+                <div class="project-item mb-5">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/drone.jpg" alt="">
+                        <div class="project-overlay">
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/drone.jpg" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                            
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <a class="d-block h5" href="">Drone Photo Enhancement</a>
+                        <span>Elevating aerial shots to breathtaking perfection.</span>
+                    </div>
+                </div>
+                <div class="project-item mb-5">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/panoroma.jpg" alt="">
+                        <div class="project-overlay">
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/panoroma.jpg" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                            
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <a class="d-block h5" href="">Panorama Stitching</a>
+                        <span>Flawless wide-angle views that showcase every detail.</span>
+                    </div>
+                </div>
+                <div class="project-item mb-5">
+                    <div class="position-relative">
+                        <img class="img-fluid" src="img/portrait.jpg" alt="">
+                        <div class="project-overlay">
+                            <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/portrait.jpg" data-lightbox="project"><i class="fa fa-eye"></i></a>
+                           
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <a class="d-block h5" href="">Portrait Enhancement</a>
+                        <span>Flawless portraits that radiate natural beauty.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project End -->
+
+
+    
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-medium text-primary">Our Team</p>
+               
+            </div>
+            <div class="row g-4">
+                <h5 >Our Skilled Professionals Are Ready to Assist You</h5>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded overflow-hidden pb-4">
+                        <img class="img-fluid mb-4" src="img/profession1.jpg" alt="">
+                        <h5>Saravana Kumar</h5>
+                        <h6>CEO, CREATIVE IMAGES</h6>
+                        <span class="text-primary">Graphic Designer</span>
+                        <ul class="team-social">
+                            <li><a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a class="btn btn-square" href=""><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded overflow-hidden pb-4">
+                        <img class="img-fluid mb-4" src="img/profession2.jpg" alt="">
+                        <h5>David Karthick</h5>
+                        <span class="text-primary">Graphic Designer</span></div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item rounded overflow-hidden pb-4">
+                        <img class="img-fluid mb-4" src="img/profession3.jpg" alt="">
+                        <h5>Robert Jhonson</h5>
+                        <span class="text-primary">Graphic Designer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl pt-5">
+        <div class="container">
+            <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-medium text-primary">Testimonials</p>
+                <h1 class="display-5 mb-5">What Clients Say About Our Services!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                    <img class="mb-4" src="img/testimonial-2.jpg" alt="">
+                    <p class="mb-4">HDR Photography Services elevated my travel photos to a whole new level. The vibrant colors and incredible details captured in the images brought my adventures to life. It's like seeing the world through a new lens. Truly breathtaking work!</p>
+                    <h5>Amit Sharma</h5>
+                    <span class="text-primary">Marketing Manager</span>
+                </div>
+                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                    <img class="mb-4" src="img/testimonial-1.jpg" alt="">
+                    <p class="mb-4">Sky Replacement Services delivered a level of quality and detail that surpassed our high standards. The new skies seamlessly blended into our visuals, enhancing the overall aesthetics. Our clients were thrilled with the final results. Truly a game-changer for our creative projects.</p>
+                    <h5>Jansy Smith</h5>
+                    <span class="text-primary">Creative Director</span>
+                </div>
+                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                    <img class="mb-4" src="img/testimonial-2.jpg" alt="">
+                    <p class="mb-4">Virtual Staging Services transformed our property listings and significantly increased buyer interest. The staged images were so realistic that many clients couldn't believe the homes weren't physically staged. The turnaround time and quality of work were exceptional!</p>
+                    <h5>Amit Patel</h5>
+                    <span class="text-primary">Real Estate Agent</span>
+                </div>
+                <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
+                    <img class="mb-4" src="img/testimonial-4.jpg" alt="">
+                    <p class="mb-4">Portrait Photography Services captured my essence beautifully. The photos were elegant and sophisticated, truly showcasing my personality. The photographer's professionalism and eye for detail were exceptional, making it a delightful experience</p>
+                    <h5>Neha Singh</h5>
+                    <span class="text-primary">Landscape Photographer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!--Contact start-->
+    <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 500px"
+          >
+            <p class="fs-5 fw-medium text-primary">Reach Us</p>
+            <h1 class="display-5 mb-5">
+             Start a new project today
+            </h1>
+          </div>
+          <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+              <h3 class="mb-4">Get Started </h3>
+              <p class="mb-4">
+                Get in touch with us today and experience exceptional service like
+                never before
+              </p>
+    
+              <form onsubmit="sendMail(event)">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                    />
+                    <label for="name">Your Name</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Your Email"
+                        required
+                    />
+                    <label for="email">Your Email</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="subject"
+                        placeholder="Subject"
+                        required
+                    />
+                    <label for="subject">Subject</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <textarea
+                        class="form-control"
+                        placeholder="Leave a message here"
+                        id="message"
+                        style="height: 200px"
+                        required
+                    ></textarea>
+                    <label for="message">Message</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button
+                    class="btn btn-primary rounded-pill py-3 px-5"
+                    type="submit"
+                >
+                    Send Message
+                </button>
+            </div>
+        </div>
+    </form>
+    
+             
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+              <h3 class="mb-4">Contact Details</h3>
+              <div class="d-flex border-bottom pb-3 mb-3">
+                <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
+                  <i class="fa fa-map-marker-alt text-white"></i>
+                </div>
+                <div class="ms-3">
+                  <h6>Our Office </h6>
+                  <span>123 Street, New York, USA</span>
+                </div>
+              </div>
+              <div class="d-flex border-bottom pb-3 mb-3">
+                <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
+                  <i class="fa fa-phone-alt text-white"></i>
+                </div>
+                <div class="ms-3">
+                  <h6>Call Us</h6>
+                  <span>+012 345 67890</span>
+                </div>
+              </div>
+              <div class="d-flex border-bottom-0 pb-3 mb-3">
+                <div class="flex-shrink-0 btn-square bg-primary rounded-circle">
+                  <i class="fa fa-envelope text-white"></i>
+                </div>
+                <div class="ms-3">
+                  <h6>Mail Us</h6>
+                  <span>info@example.com</span>
+                </div>
+              </div>
+    
+              <iframe
+                class="w-100 rounded"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                frameborder="0"
+                style="min-height: 300px; border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contact End -->
+    
+    
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Our Office</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Best Services</a>
+                </div>
+                <div class="col-lg-5 col-md-6"> 
+                    <h5 class="text-white mb-4">Services we best offer</h5>
+                    <a class="btn btn-link" href="virtualstaging.html">Virtual Staging</a>
+                    <a class="btn btn-link" href="drone.html" >Drone Photo Enhancement</a>
+                    <a class="btn btn-link"  href="sky.html">Sky Replacement</a>
+                    <a class="btn btn-link" href="daytodusk.html">Day To Dusk</a>
+                    <a class="btn btn-link" href="floorplan.html">Floor Plan</a>
+                    <a class="btn btn-link" href="virtualtours.html">Virtual Tours</a>
+                    <a class="btn btn-link" href="portrait.html">Portrait Enhancement</a>
+                    <a class="btn btn-link" href="hdr.html"> HDR Image </a>
+                    <a class="btn btn-link" href="grass.html"> Grass replacement</a>                  
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Follow us Social Media</h5>
+                    <div class="ms-3 d-flex">
+                        <a
+                          class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                          href=""
+                          ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a
+                          class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                          href=""
+                          ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a
+                          class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                          href=""
+                          ><i class="fab fa-twitter"></i
+                        ></a>
+                        <a
+                          class="btn btn-sm-square btn-light text-primary rounded-circle ms-2"
+                          href=""
+                          ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="fw-medium text-light" href="#">Creative Image</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="fw-medium text-light" href="https://portfoliomyckelraj.netlify.app/">Myckelraj</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="index.html" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
